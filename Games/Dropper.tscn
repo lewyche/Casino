@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Dropper.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/icon.png" type="Texture" id=2]
 [ext_resource path="res://Game Scenes/Dropper/Catcher.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game Scenes/All Scenes/Go Back.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game Scenes/All Scenes/Money.tscn" type="PackedScene" id=5]
 
 [node name="Dropper" type="Node2D"]
 script = ExtResource( 1 )
@@ -24,25 +26,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Money" type="Label" parent="Control"]
-margin_left = 927.045
-margin_top = 5.8107
-margin_right = 1029.05
-margin_bottom = 19.8107
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Go Back" type="Button" parent="Control"]
-margin_left = 5.04541
-margin_top = 5.8107
-margin_right = 124.045
-margin_bottom = 25.8107
-text = "Go back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Percent" type="Label" parent="Control"]
 margin_left = 487.71
 margin_top = 6.73477
@@ -52,4 +35,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Control/Go Back" to="." method="_on_Go_Back_pressed"]
+[node name="Go Back" parent="Control" instance=ExtResource( 4 )]
+
+[node name="Money" parent="Control" instance=ExtResource( 5 )]
+margin_left = 930.383
+margin_top = 4.00452
+margin_right = 970.383
+margin_bottom = 18.0045

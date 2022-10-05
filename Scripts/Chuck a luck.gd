@@ -121,5 +121,3 @@ func _on_six_pred_pressed():
 	dice_roll_prediction = 6
 	change_prediction()
 
-func _on_Go_Back_pressed():
-	get_tree().change_scene("res://Main.tscn")
