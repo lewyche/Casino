@@ -12,11 +12,11 @@ config_version=4
 
 config/name="Spinner"
 run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://Assets/icon.png"
 
 [autoload]
 
-Player="*res://Player.tscn"
+Player="*res://Game Scenes/All Scenes/Player.tscn"
 
 [display]
 

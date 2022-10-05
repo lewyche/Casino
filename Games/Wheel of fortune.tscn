@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Game Scenes/Spinner/Wheel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Wheel of fortune.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Assets/icon.png" type="Texture" id=3]
+[ext_resource path="res://Game Scenes/All Scenes/Go Back.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game Scenes/All Scenes/Money.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.991, 35.2601 )
@@ -39,25 +41,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Money" type="Label" parent="Control"]
-margin_left = 104.0
-margin_top = -514.0
-margin_right = 236.0
-margin_bottom = -491.0
-text = "Money: "
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Go Back" parent="Control" instance=ExtResource( 4 )]
+margin_left = -787.424
+margin_top = -513.477
+margin_right = -723.424
+margin_bottom = -493.477
 
-[node name="Go back" type="Button" parent="Control"]
-margin_left = -789.5
-margin_top = -513.5
-margin_right = -651.5
-margin_bottom = -485.5
-text = "Go Back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Money" parent="Control" instance=ExtResource( 5 )]
+margin_left = 142.469
+margin_top = -514.364
+margin_right = 182.469
+margin_bottom = -500.364
 
 [node name="Arrow" type="KinematicBody2D" parent="."]
 position = Vector2( 487.58, 23.3303 )
@@ -73,4 +67,3 @@ texture = ExtResource( 3 )
 
 [connection signal="body_entered" from="Wheel" to="Wheel" method="_on_Wheel_body_entered"]
 [connection signal="pressed" from="Control/Spin" to="." method="_on_Spin_pressed"]
-[connection signal="pressed" from="Control/Go back" to="." method="_on_Go_back_pressed"]
