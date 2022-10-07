@@ -60,16 +60,18 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Blackjack"
 
-[node name="Button6" type="Button" parent="Control/GridContainer"]
+[node name="Slot Machine" type="Button" parent="Control/GridContainer"]
 margin_left = 684.0
 margin_top = 302.0
 margin_right = 1022.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+text = "Slot Machine"
 
 [connection signal="pressed" from="Control/GridContainer/Wheel" to="." method="_on_Wheel_pressed"]
 [connection signal="pressed" from="Control/GridContainer/Chuck a luck" to="." method="_on_Chuck_a_luck_pressed"]
 [connection signal="pressed" from="Control/GridContainer/Lottery" to="." method="_on_Lottery_pressed"]
 [connection signal="pressed" from="Control/GridContainer/Dropper" to="." method="_on_Dropper_pressed"]
 [connection signal="pressed" from="Control/GridContainer/Blackjack" to="." method="_on_Blackjack_pressed"]
+[connection signal="pressed" from="Control/GridContainer/Slot Machine" to="." method="_on_Slot_Machine_pressed"]

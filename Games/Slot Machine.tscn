@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/slot machine.png" type="Texture" id=1]
+[ext_resource path="res://Game Scenes/All Scenes/Money.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game Scenes/All Scenes/Go Back.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Slot Machine.gd" type="Script" id=4]
+
+[node name="Slot Machine" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1025.0
+margin_bottom = 602.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot machine" type="Sprite" parent="Control"]
+position = Vector2( 512.343, 298.513 )
+scale = Vector2( 2.04675, 1.19706 )
+texture = ExtResource( 1 )
+
+[node name="Money" parent="Control" instance=ExtResource( 2 )]
+margin_left = 873.0
+margin_top = -1.0
+margin_right = 1022.0
+margin_bottom = 13.0
+
+[node name="Go Back" parent="Control" instance=ExtResource( 3 )]
+
+[node name="Slot1" type="Label" parent="Control"]
+margin_left = 149.636
+margin_top = 197.955
+margin_right = 243.636
+margin_bottom = 353.955
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot2" type="Label" parent="Control"]
+margin_left = 363.224
+margin_top = 197.955
+margin_right = 457.224
+margin_bottom = 353.955
+align = 1
+valign = 1
+
+[node name="Slot3" type="Label" parent="Control"]
+margin_left = 567.344
+margin_top = 185.745
+margin_right = 661.344
+margin_bottom = 341.745
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="Control"]
+margin_left = 356.455
+margin_top = 437.636
+margin_right = 524.455
+margin_bottom = 495.636
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 794.941
+margin_top = 516.0
+margin_right = 1252.94
+margin_bottom = 649.0
+rect_rotation = -90.5768
+text = "Only 500 dollars!!!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/Play" to="." method="_on_Play_pressed"]
