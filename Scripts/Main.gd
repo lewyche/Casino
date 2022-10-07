@@ -19,3 +19,7 @@ func _on_Dropper_pressed():
 
 func _on_Blackjack_pressed():
 	get_tree().change_scene("res://Games/Blackjack.tscn")
+
+
+func _on_Slot_Machine_pressed():
+	get_tree().change_scene("res://Games/Slot Machine.tscn")
