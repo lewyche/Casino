@@ -41,9 +41,17 @@ func get_hand_val():
 		total += hand[i]
 	return total
 
+func stand():
+	pass
+
 func update_ai():
-	if get_hand_val() < 17:
-		parent.draw_card(false)
+
+	if get_hand_val() <= 16:
+		if parent.standing:
+			while get_hand_val() <= 16:
+				parent.draw_card(false)
+		else:	
+			parent.draw_card(false)
 
 func _ready():
 	pass # Replace with function body.
