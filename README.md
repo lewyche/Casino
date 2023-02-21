@@ -1,3 +1,2 @@
 # Casino
-Casino game
-download and open in godot editor
+Download and run in godot editor to play. 
